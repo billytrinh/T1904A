@@ -19,7 +19,8 @@ int main(){
 			for (int j = 0; j < i; ++j)
 			{
 				if(arr[i] == arr[j]){
-					count++;	
+					count++;
+					break;	
 				}
 			}
 			if(count == 0){
