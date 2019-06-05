@@ -1,0 +1,83 @@
+*{
+    /*font-size: 200px;*/
+
+}
+
+h1{
+    color:red;
+}
+h2{
+    color:green;
+}
+h3{
+    color: black;
+}
+
+h3#h3_demo{
+    color:pink;
+}
+
+.h4_class{
+    color: blueviolet;
+}
+.h5_class{
+    color: aquamarine;
+}
+p.doan_van{color: yellow;}
+.doan_van span{color:red;}
+input[type="text"][name="email"]{
+    color: brown;
+}
+p#doan_van.doan_van{
+
+}
+p *{
+  color: yellow;
+}
+h5 span{
+    color: blue;
+}
+h5 > span{
+    color: red;
+}
+ul > li {
+    color: red;
+}
+ul > li > ul > li{
+    color: black;
+}
+
+h1.demo_css_text{
+    font-family: Montserrat ;
+    font-size: 50px;
+    font-weight: bold;/* 100 300 400 500 600 700 800 900 */
+    font-style: italic;
+    text-align: justify;
+    text-transform:none ; /* uppercase lowercase capitalize*/
+    text-decoration:none; /* underline line-through overline*/
+    text-indent: 50px;
+    /*color:rgba(23,23,23,0.5);*/
+    /*background-color: red;*/
+    /*opacity: 0.5;*/
+    color: #787878;
+    background-image: url(images/ngoctrinh.jpg);
+    background-repeat: no-repeat;
+    /*background-size: cover;*/
+    background-position: center top;
+}
+.bg-fade{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left: 0;
+    background: black;
+    z-index: 10;
+    opacity: 0.7;
+}
+.text{
+    font-family: Nunito Sans;
+    font-size:16px;
+    color: #787878;
+    font-weight: 400;/* normal */
+}
