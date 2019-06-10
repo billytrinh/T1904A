@@ -67,7 +67,7 @@ footer{
 }
 .currency{
     float: left;
-    width: 50%;
+    width: calc(50% - 10px);
 }
 .links{
     float: right;
