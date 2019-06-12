@@ -77,4 +77,12 @@ footer{
     float: none;
     width: 1170px;
     margin: 0 auto;
+    position: relative;
+}
+.ngoc-trinh-img{
+    position: fixed;/* absolute */
+    top:50%;
+    left: 50%;
+    margin-top:-100px;
+    margin-left: -50px;
 }
