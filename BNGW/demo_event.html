@@ -28,7 +28,48 @@
         <option value="2">Option2</option>
         <option value="3">Option3</option>
     </select>
+    <br/>
+    <br/>
+    <button type="button" onclick="timeout()">Start</button>
+
     <script>
+        var m = 10,s= 59,flag = false;
+        var it;
+        function timeout() {
+            if(flag){
+                flag = false;
+            }else {
+                flag= true;
+            }
+            if(flag){
+                it = setInterval(function () {
+                    if(m==0&& s==0){
+                        var m1 = m<10?"0"+m:m;
+                        var s1 = s<10?"0"+s:s;
+                        console.log(m1+":"+s1);
+                        clearInterval(it);
+                    }else {
+                        var m1 = m<10?"0"+m:m;
+                        var s1 = s<10?"0"+s:s;
+                        console.log(m1+":"+s1);
+                    }
+                    if(s==0){
+                        m--;
+                        if(m>=0){
+                            s=59;
+                        }
+                    }else {
+                        s--;
+                    }
+
+                },1000);
+            }else {
+                clearInterval(it);
+            }
+
+        }
+
+
         function demo_event() {
             alert("Event pushing..");
         }
