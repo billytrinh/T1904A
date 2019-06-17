@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM Demo</title>
+</head>
+<body>
+    <div id="div_demo" class="div_class"
+         style="width:200px;height: 200px;background-color: red">
+        Content of division
+    </div>
+    <br/>
+    <input id="input_text" type="text" name="input_name"/>
+    <br/>
+
+    <button type="button" onclick="Green()">Green</button>
+
+<script type="text/javascript">
+    function Green() {
+        var x = document.getElementById("div_demo");
+        x.style.backgroundColor = "green";
+        //x.style.width = "500px";
+        x.style.color = "white";
+        x.style.fontSize = "30px";
+
+        x.innerText = "Day la doan text moi sau khi sua chua";
+
+        x.classList.add("demo_add_class");
+
+        if(x.classList.contains("div_class")){
+            x.classList.remove("div_class");
+        }
+
+        x.innerHTML = "<p>Hello world</p>";
+       // x.outerHTML = x.outerHTML+x.outerHTML;
+
+        var ip = document.getElementById("input_text");
+
+        var v =  ip.value;
+
+        x.style.width = v+"px";
+
+    }
+</script>
+</body>
+</html>

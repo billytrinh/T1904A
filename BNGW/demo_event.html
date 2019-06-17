@@ -30,7 +30,7 @@
     </select>
     <br/>
     <br/>
-    <button type="button" onclick="timeout()">Start</button>
+    <button id="btn_time" type="button" onclick="timeout()">Start</button>
 
     <script>
         var m = 10,s= 59,flag = false;
@@ -63,8 +63,12 @@
                     }
 
                 },1000);
+                var div = document.getElementById("btn_time");
+                div.innerText = "Pause";
             }else {
                 clearInterval(it);
+                var div = document.getElementById("btn_time");
+                div.innerText = "Start";
             }
 
         }
