@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo Event</title>
+</head>
+<body onload="demo_onload()">
+    <button type="button" onclick="demo_event()">Push</button>
+    <div onmouseover="demo_event2()" onmouseout="demo_event2()" style="width: 100px;height: 100px;background-color: red">
+        Content of division
+    </div>
+
+    <div onmouseenter="demo_event3()" onmouseleave="demo_event3()" style="width: 100px;height: 100px;background-color: green">
+        Content of division
+    </div>
+    <div oncopy="demo_event3()" onpaste="demo_event3()" oncut="demo_event3()"
+         style="width: 100px;height: 100px;background-color: olive">
+        Content of division
+    </div>
+    <br/>
+    <br/>
+
+    <input type="text" onkeydown="logWord()" onkeyup="logWord2()"
+           onkeypress="logWord3()" name="search" placeholder="Search ..."/>
+    <br/>
+    <select name="select_name" onchange="logword4()">
+        <option value="1">Option1</option>
+        <option value="2">Option2</option>
+        <option value="3">Option3</option>
+    </select>
+    <script>
+        function demo_event() {
+            alert("Event pushing..");
+        }
+        function demo_event2() {
+           // alert("Event Mouse over....");
+        }
+        function demo_event3() {
+            console.log("event onmouseenter");
+        }
+        function demo_onload() {
+            //alert("loading page..")
+        }
+        function logWord() {
+            console.log("Keydown..");
+        }
+        function logWord2() {
+            console.log("Keyup..");
+        }
+        function logWord3() {
+            console.log("Key press..");
+        }
+        function logword4() {
+            console.log("onchange...");
+        }
+    </script>
+</body>
+</html>
