@@ -9,13 +9,42 @@
          style="width:200px;height: 200px;background-color: red">
         Content of division
     </div>
+    <div class="div_class" style="width:200px;height: 200px;background-color: green">
+        Content 2
+    </div>
     <br/>
     <input id="input_text" type="text" name="input_name"/>
     <br/>
 
     <button type="button" onclick="Green()">Green</button>
 
+    <button type="button" onclick="Red()">Red</button>
+    <button type="button" onclick="Orange()">Orange</button>
+    <button type="button" onclick="Blue()">Blue</button>
+
 <script type="text/javascript">
+    function Blue() {
+        var d = document.querySelectorAll("div.div_class#div_demo");
+        for(var i=0;i<d.length;i++){
+            d[i].style.backgroundColor = "blue";
+        }
+    }
+    
+    function Orange() {
+        var d = document.getElementsByClassName("div_class");
+        for (var i=0;i<d.length;i++){
+            d[i].style.backgroundColor = "orange";
+        }
+    }
+
+    function Red() {
+        var d = document.getElementsByTagName("div");
+        console.log(d);
+        for (var i=0;i<d.length;i++){
+            d[i].style.backgroundColor = "violet";
+        }
+    }
+    
     function Green() {
         var x = document.getElementById("div_demo");
         x.style.backgroundColor = "green";
