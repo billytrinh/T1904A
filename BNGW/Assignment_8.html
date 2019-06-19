@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Assignment 8</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="popup">
+        <h2>Coming soon</h2>
+        <div class="timer">
+            <span id="day">00</span>
+            <em>:</em>
+            <span id="hour">00</span>
+            <em>:</em>
+            <span id="min">00</span>
+            <em>:</em>
+            <span id="sec">00</span>
+        </div>
+    </div>
+<script type="text/javascript">
+    var d = 1;
+    function countdownTimer() {
+        var h = 23;
+        var m = 59;
+        var s = 59;
+        var it = setInterval(function () {
+            if(d <=0 && h<=0 && m<=0 && s<=0){
+                clearInterval(it);
+            }
+            document.getElementById("day").innerText = d<10?"0"+d:d;
+            document.getElementById("hour").innerText = h<10?"0"+h:h;
+            document.getElementById("min").innerText = m<10?"0"+m:m;
+            document.getElementById("sec").innerText = s<10?"0"+s:s;
+            s--;
+            if(s<0){
+                m--;
+                s= 59;
+            }
+            if(m<0){
+                h--;
+                m=59;
+            }
+            if(h<0){
+                d--;
+                h=23;
+            }
+        },1000);
+    }
+
+    countdownTimer();
+</script>
+</body>
+</html>

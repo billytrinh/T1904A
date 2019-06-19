@@ -20,7 +20,7 @@
     <br/>
     <br/>
 
-    <input type="text" onkeydown="logWord()" onkeyup="logWord2()"
+    <input id="time_v" type="text" onkeydown="logWord()" onkeyup="logWord2()"
            onkeypress="logWord3()" name="search" placeholder="Search ..."/>
     <br/>
     <select name="select_name" onchange="logword4()">
@@ -33,9 +33,10 @@
     <button id="btn_time" type="button" onclick="timeout()">Start</button>
 
     <script>
-        var m = 10,s= 59,flag = false;
+        var m,s= 59,flag = false;
         var it;
         function timeout() {
+            m = document.getElementById("time_v").value;
             if(flag){
                 flag = false;
             }else {

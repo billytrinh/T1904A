@@ -128,3 +128,20 @@ h1.demo_css_text{
     background: green;
     border-radius: 100%;
 }
+.popup{
+    float: left;
+    width: 400px;
+    height: 300px;
+    background-color: #e6e6e6;
+    text-align: center;
+}
+.popup h2{
+    font-size: 35px;
+}
+.popup .timer span{
+    font-size: 40px;
+}
+.popup .timer em{
+    font-size: 40px;
+    font-style: normal;
+}
