@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo jQuery</title>
+    <script type="text/javascript" src="js/jquery.js"></script>
+</head>
+<body>
+    <div id="div_jq" class="demo_jq" style="width: 200px;height: 200px;background-color: red">
+        Content of Division
+    </div>
+    <div  class="demo_jq" style="width: 200px;height: 200px;background-color: red">
+        Content of Division
+    </div>
+    <br/>
+    <input type="text" name="name" class="input-text"/>
+
+    <button type="button" onclick="Green()">Green</button>
+    <button type="button" onclick="BoxShow()">show</button>
+    <button type="button" onclick="BoxHide()">hide</button>
+    <button type="button" onclick="BoxAffect()">Affect</button>
+    <script type="text/javascript">
+        function BoxAffect() {
+            var d = jQuery("div.demo_jq");
+            //d.toggle();
+            //d.slideToggle(1000);
+          //  d.fadeToggle(1000);
+            d.css("background-color","green");
+        }
+
+        function BoxShow() {
+            var jjj = jQuery.noConflict();
+            var d = jjj("div#div_jq.demo_jq");
+            //d.show();
+            //d.fadeIn(1000);
+            d.slideDown(1000);
+        }
+
+        function BoxHide() {
+            var d = $("div#div_jq.demo_jq");
+            //d.hide();
+           // d.fadeOut(1000);
+            d.slideUp(1000);
+        }
+
+        function Green() {
+            var d = $("div#div_jq.demo_jq");
+           // d.css("background-color","green");
+            d.css(
+                {
+                    "background-color": "green",
+                }
+            );
+            var ip = $(".input-text");
+            var x = ip.val();
+            d.animate({
+                "width": x+"px",
+            },1000);
+
+            d.text("hello world!");
+           // alert(d.text());
+
+            if(d.hasClass("demo_jq")){
+                d.addClass("demo_demo");
+            }else{
+                d.removeClass("demo_demo");
+            }
+
+            d.html("<p>hello world!</p>"); // dddd.innerHTML = "<p>hello world!</p>"
+            d.append("<p>hahaha</p>");
+            d.after("<p>Outside division</p>");
+            d.before("<p>Outside division</p>");
+
+
+
+        }
+    </script>
+</body>
+</html>
