@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo AJAX</title>
+    <script type="text/javascript" src="js/jquery.js"></script>
+</head>
+<body>
+    <h1>Danh sach sinh vien</h1>
+    <ul>
+        <li><p><span>The Anh</span><b>9</b></p></li>
+    </ul>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $.ajax({
+                url: "data/students.json",
+                method: "get",
+                success: function (data) {
+                   $("h1").text(data.title);
+                   var x = '';
+                   for (var i=0;i<data.students.length;i++){
+                       x += '<li><p><span>'+data.students[i].name
+                           +'</span><b>'+data.students[i].mark+'</b></p></li>';
+                   }
+                   $("ul").html(x);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

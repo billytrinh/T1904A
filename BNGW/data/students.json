@@ -1,0 +1,13 @@
+{
+  "title": "Danh sach sinh vien lop T1904A",
+  "students": [
+    {
+      "name": "The Anh",
+      "mark": 3.95
+    },
+    {
+      "name": "Tung",
+      "mark": 3.99
+    }
+  ]
+}
