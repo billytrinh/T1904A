@@ -1,0 +1,20 @@
+{
+  "title": "Danh sach san pham moi",
+  "product_list": [
+    {
+      "name": "tivi sony 100inch",
+      "price": "10.000.000VND",
+      "qty" : 1
+    },
+    {
+      "name": "Tu lanh Toshiba",
+      "price": "5.000.000VND",
+      "qty" : 2
+    },
+    {
+      "name": "Dieu hoa Panasonic",
+      "price": "15.000.000VND",
+      "qty" : 6
+    }
+  ]
+}

@@ -11,19 +11,30 @@
         <li><p><span>The Anh</span><b>9</b></p></li>
     </ul>
 
+    <table border="1">
+        <thead>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Qty</th>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
     <script type="text/javascript">
         $(document).ready(function () {
             $.ajax({
-                url: "data/students.json",
+                url: "data/products.json",
                 method: "get",
                 success: function (data) {
                    $("h1").text(data.title);
                    var x = '';
-                   for (var i=0;i<data.students.length;i++){
-                       x += '<li><p><span>'+data.students[i].name
-                           +'</span><b>'+data.students[i].mark+'</b></p></li>';
+                   for (var i=0;i<data.product_list.length;i++){
+                       x += '<tr><td>'+data.product_list[i].name
+                           +'</td><td>'+data.product_list[i].price+'</td>'
+                           +'<td>'+data.product_list[i].qty+'</td></td></tr>';
                    }
-                   $("ul").html(x);
+                   $("tbody").html(x);
                 }
             });
         });
