@@ -7,6 +7,7 @@
 </head>
 <body>
     <h1>Danh sach sinh vien</h1>
+    <h2>hello</h2>
     <ul>
         <li><p><span>The Anh</span><b>9</b></p></li>
     </ul>
@@ -22,21 +23,51 @@
         </tbody>
     </table>
     <script type="text/javascript">
+       // localStorage.setItem("abc","Hello world!");
+       // $("h2").text(localStorage.getItem("abc"));
+
         $(document).ready(function () {
-            $.ajax({
-                url: "data/products.json",
-                method: "get",
-                success: function (data) {
-                   $("h1").text(data.title);
-                   var x = '';
-                   for (var i=0;i<data.product_list.length;i++){
-                       x += '<tr><td>'+data.product_list[i].name
-                           +'</td><td>'+data.product_list[i].price+'</td>'
-                           +'<td>'+data.product_list[i].qty+'</td></td></tr>';
-                   }
-                   $("tbody").html(x);
+            if(sessionStorage.getItem("du_lieu")){
+                var dd =  sessionStorage.getItem("du_lieu");
+                console.log(dd);
+                var data = JSON.parse(dd);
+                console.log(data);
+                $("h1").text(data.title);
+                var x = '';
+                for (var i=0;i<data.product_list.length;i++){
+                    x += '<tr><td>'+data.product_list[i].name
+                        +'</td><td>'+data.product_list[i].price+'</td>'
+                        +'<td>'+data.product_list[i].qty+'</td></td></tr>';
                 }
-            });
+                $("tbody").html(x);
+            }else {
+                $.ajax({
+                    url: "data/products.json",
+                    method: "get",
+                    success: function (data) {
+                        sessionStorage.setItem("du_lieu",JSON.stringify(data));
+                        $("h1").text(data.title);
+                        var x = '';
+                        for (var i=0;i<data.product_list.length;i++){
+                            x += '<tr><td>'+data.product_list[i].name
+                                +'</td><td>'+data.product_list[i].price+'</td>'
+                                +'<td>'+data.product_list[i].qty+'</td></td></tr>';
+                        }
+                        $("tbody").html(x);
+                    }
+                });
+            }
+
+            // $.get("data/products.json",function (data) {
+            //            $("h1").text(data.title);
+            //            var x = '';
+            //            for (var i=0;i<data.product_list.length;i++){
+            //                x += '<tr><td>'+data.product_list[i].name
+            //                    +'</td><td>'+data.product_list[i].price+'</td>'
+            //                    +'<td>'+data.product_list[i].qty+'</td></td></tr>';
+            //            }
+            //            $("tbody").html(x);
+            // })
         });
     </script>
 </body>
