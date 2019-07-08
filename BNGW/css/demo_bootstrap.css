@@ -11,8 +11,28 @@
     background-color: #2aabd2;
 }
 .box-2{
-
-
     height: 200px;
     background-color:#3e8f3e ;
+    transition: all 3000ms;
+    animation-name: demo_animation2;
+    animation-duration: 40s;
+    animation-iteration-count: infinite;
+}
+.box-2:hover{
+    background-color: red;
+    /*transform: rotate(180deg);*/
+    /*transform: translate(100px,200px);*/
+    transform: scale(2);
+}
+
+@keyframes demo_animation {
+    from {background-color: red;}
+    to {background-color: yellow;}
+}
+@keyframes demo_animation2 {
+    0%   {background-color:red;}
+    25%  {background-color:yellow;}
+    50%  {background-color:blue;}
+    75%  {background-color:green;}
+    100% {background-color:red;}
 }
