@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo Slider</title>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="lib/owl_carousel/js/owl.carousel.js"></script>
+
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css"/>
+    <link rel="stylesheet" href="lib/owl_carousel/css/owl.carousel.css"/>
+    <link rel="stylesheet" href="lib/owl_carousel/css/owl.theme.default.css"/>
+</head>
+<body>
+    <div class="col-xs-8 col-xs-offset-2">
+        <ul id="demo_slider" class="owl-carousel owl-theme">
+            <li class="item">Slider 1</li>
+            <li class="item">Slider 2</li>
+            <li class="item">Slider 3</li>
+            <li class="item">Slider 4</li>
+            <li class="item">Slider 5</li>
+            <li class="item">Slider 6</li>
+        </ul>
+        <script type="text/javascript">
+            $('#demo_slider').owlCarousel({
+                loop:true,
+                margin:10,
+                responsiveClass:true,
+                responsive:{
+                    0:{
+                        items:1,
+                        nav:true
+                    },
+                    600:{
+                        items:2,
+                        nav:false
+                    },
+                    1000:{
+                        items:3,
+                        nav:true,
+                        loop:false
+                    }
+                }
+            })
+
+        </script>
+        <style>
+            .item{
+                height: 300px;
+                background-color: #2aabd2;
+            }
+        </style>
+    </div>
+</body>
+</html>
