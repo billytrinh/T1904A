@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/demo_bootstrap.css"/>
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="lib/bootstrap/js/bootstrap.js"></script>
+    <script type="text/javascript" src="lib/bootstrap/js/validator.js"></script>
 </head>
 <body>
     <div class="container">
@@ -56,26 +57,29 @@
             </table>
 
             <div class="col-xs-6 col-lg-offset-3">
-                <form action="#" method="get">
+                <form action="#" method="get" data-toggle="validator" role="form">
                     <div class="form-group">
                         <label>Username</label>
-                        <input type="text" class="form-control" name="name" placeholder="Dien thong tin ca nhan"/>
+                        <input type="text" class="form-control" name="firstname" placeholder="Dien thong tin ca nhan" required/>
+                        <div class="help-block with-errors"></div>
                     </div>
                     <div class="form-group">
                         <label>Username</label>
-                        <input type="text" class="form-control" name="name" placeholder="Dien thong tin ca nhan"/>
+                        <input type="text" class="form-control" name="username" placeholder="Dien thong tin ca nhan"  required/>
+                        <div class="help-block with-errors"></div>
                     </div>
                     <div class="form-group">
                         <label>Username</label>
-                        <input type="text" class="form-control" name="name" placeholder="Dien thong tin ca nhan"/>
+                        <input type="email"  class="form-control" name="email" placeholder="Dien thong tin ca nhan"  required/>
+                        <div class="help-block with-errors"></div>
                     </div>
                     <div class="form-group">
                         <label>Username</label>
-                        <input type="text" class="form-control" name="name" placeholder="Dien thong tin ca nhan"/>
+                        <input type="text" class="form-control" name="password" placeholder="Dien thong tin ca nhan"  required/>
                     </div>
                     <div class="form-group">
                         <label>Username</label>
-                        <input type="text" class="form-control" name="name" placeholder="Dien thong tin ca nhan"/>
+                        <input type="text" class="form-control" name="lastname" placeholder="Dien thong tin ca nhan"  required/>
                     </div>
                     <div class="form-group">
                         <button class="btn btn-danger" type="submit"><span class="glyphicon glyphicon-send"></span></button>
